@@ -13,6 +13,10 @@ handlers:
 - url: /demos/css
   static_dir: demos/css
 
+- url: /demos/(.*\.(css))$
+  static_files: demos/\1
+  upload: demos/.*\.(css)$
+
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
