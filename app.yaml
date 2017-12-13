@@ -1,0 +1,18 @@
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+# Serve images as static resources.
+- url: /demos/images
+  static_dir: demos/images
+
+- url: /demos/js
+  static_dir: demos/js
+
+- url: /demos/css
+  static_dir: demos/css
+
+  # Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
