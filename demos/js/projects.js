@@ -4,8 +4,10 @@
  * @version 1.0
  * @copyright 2016 Third I Inc.
  */
-
-var baseurl = "http://45.63.12.123/demos/";
+var urlStr = window.location.href;
+var urlArr = urlStr.split('/');
+var baseurl = urlArr[0] + '//' + urlArr[2] + '/' + urlArr[3] + '/';
+//var baseurl = "http://45.63.12.123/demos/";
 
 function showSolution(solutionURL) {
 	if (solutionURL == '') {
