@@ -5,7 +5,7 @@
  * @version 1.0
  * @copyright 2016 Third I Inc.
  */
-
+session_start();
 unset( $_SESSION['user_id'] );
 session_unset();
 session_destroy();

@@ -10,14 +10,6 @@ handlers:
 - url: /demos/js
   static_dir: demos/js
 
-<<<<<<< HEAD
-- url: /demos/css
-  static_dir: demos/css
-
-  # Serve php scripts.
-- url: /(.+\.php)$
-  script: \1
-=======
 - url: /demos/(.*\.(js))$
   static_files: demos/\1
   upload: demos/.*\.(js)$
@@ -32,4 +24,3 @@ handlers:
 # Serve php scripts.
 - url: /(.+\.php)$
   script: \1
->>>>>>> 8d1ecbc9719fbb090f01875855b1ae21b601f1da

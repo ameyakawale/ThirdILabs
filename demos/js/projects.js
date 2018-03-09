@@ -21,3 +21,31 @@ function showSolution(solutionURL) {
 function showGenericError(errStr) {
 	swal("Oops...", errStr, "error");
 }
+
+function filterCategories(categoryID) {
+	$('ul.navbar-nav.navbar-header-menu.mr-auto li').each(function(i) {
+		if ($(this).attr('id') == categoryID + '-menu') {
+    		$(this).attr('class', 'nav-item active');
+		} else {
+			$(this).attr('class', 'nav-item');
+			showAllCategories();
+			if (categoryID != 'all-categories') {
+				hideOtherCategories(categoryID);
+			}
+		}
+	});
+}
+
+function showAllCategories() {
+	$(".col-md-4.col-lg-4.col-xl-4.mb-4").each(function(i) {
+		$(this).show();
+	});
+}
+
+function hideOtherCategories(catID) {
+	$(".col-md-4.col-lg-4.col-xl-4.mb-4").each(function(i) {
+		if ($(this).attr('id') != catID) {
+			$(this).hide();
+		}
+	});
+}
